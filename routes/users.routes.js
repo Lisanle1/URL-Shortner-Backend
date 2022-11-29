@@ -219,9 +219,10 @@ router.post('/forgotpassword',async(req,res)=>{
                 <span>To reset your password, click on the button below:<span/><br/>
                 <a href=${URL} target='_blank'><Button style=" background-color:#00A2ED; width:11em; color:white; padding:10px; outline: none; border-radius:12px; border:none; margin-top:5px; " >Reset password</Button></a><br/><br/>
               <div><br/><br/>
-                  <h6>
-                    Or copy and paste the URL into your browser:         
-                  </h6>
+              <span><strong>
+              Or copy and paste the URL into your browser :
+              </strong>
+              </span>
                   <p>${URL}</p>
               
               </div>`
@@ -233,7 +234,7 @@ router.post('/forgotpassword',async(req,res)=>{
                 else{
                      res.send({
                         statusCode:200,
-                        message:"Email has been sent successfully!"
+                        message:"Reset Mail has been sent successfully."
                     })
                 }
             })  
