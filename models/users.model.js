@@ -30,11 +30,6 @@ const userSchema= new mongoose.Schema({
     confirmPassword:{
         type:String,
     },
-    links:[],
-    linksCount:{
-        type:String,
-        default:0
-    },
     status:{
         type:String,
         enum:['pending','active'],

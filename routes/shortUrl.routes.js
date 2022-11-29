@@ -42,7 +42,7 @@ router.get('/:urlId',async(req,res)=>{
                 message:"url not found"
             })
         }
-        await Url.findByIdAndUpdate({_id:existUrl._id},{$inc:{clicks:1}},{updated_At:Date.now})
+        await Url.findByIdAndUpdate({_id:existUrl._id},{$inc:{clicks:1}})
         res.redirect(existUrl.orgUrl);
     }
     catch{
