@@ -3,7 +3,7 @@ const router=express.Router();
 const auth=require('../middleware/auth')
 const Url=require('../models/shortUrl.models');
 const ShortId =require('../helpers/shortUrlGen');
-const BASE_URL='http://localhost:3001/api/shortify'
+const BASE_URL=process.env.BASE_URL;
 router.post('/addurl',auth.authenticateUser,async(req,res)=>{
     try{
         let payload=req.body;
